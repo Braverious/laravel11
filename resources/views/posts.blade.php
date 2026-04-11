@@ -28,7 +28,7 @@
     {{-- <h3 style="text-xl">Welcome to the Blog hehe</h3> --}}
     @foreach ($posts as $post)
         <article class="py-8 mx-w-screen-md border-b border-gray-300">
-            <a href="/posts/{{ $post['id'] }}">
+            <a href="/posts/{{ $post['slug'] }}">
                 <h3 class="mb-1 text-3xl tracking-light font-bold text-gray-900">{{ $post['title'] }}</h3>
             </a>
             <div class="text-base text-gray-500">
@@ -36,7 +36,7 @@
                 <a href="#">{{ $post['author'] }}</a> | 11 April 2026
             </div>
             <p class="my-4 font-light">{{ Str::limit($post['body'], 100) }}</p>
-            <a href="/posts/{{ $post['id'] }}" class="font-medium text-blue-500">Read More &raquo;</a>
+            <a href="/posts/{{ $post['slug'] }}" class="font-medium text-blue-500">Read More &raquo;</a>
         </article>
     @endforeach
 
