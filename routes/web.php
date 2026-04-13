@@ -7,6 +7,29 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+class Post {
+    public static function all() {
+        return [
+            [
+                'id' => 1,
+                'slug' => 'teks-artikel-1',
+                'title' => "Teks Artikel 1",
+                'author' => 'Awe Welas',
+                'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ratione mollitia quod veritatis facilis.
+            Assumenda aperiam rem blanditiis nulla delectus, voluptatum porro, distinctio minima animi totam magnam eos
+            deserunt est?'
+            ],
+            [
+                'id' => 2,
+                'slug' => 'teks-artikel-2',
+                'title' => "Teks Artikel 2",
+                'author' => 'Awe Welas',
+                'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et praesentium eveniet in omnis vitae perferendis quasi, totam ad velit dignissimos eius sapiente vero possimus itaque reprehenderit reiciendis accusamus cumque.'
+            ]
+        ];
+    }
+}
+
 Route::get('/', function () {
     return view('home', ['title' => 'Home Page']);
 });
